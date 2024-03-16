@@ -31,14 +31,12 @@ void	game_end(t_so_long *s)
 		mlx_destroy_image(s->mlx_ptr, s->wall);
 	if (s->mlx_win)
 		mlx_destroy_window(s->mlx_ptr, s->mlx_win);
-	system("leaks so_long");
 	exit(0);
 }
 
 void	free_map(t_so_long *s)
 {
 	ft_malloc_error(s->map);
-	system("leaks so_long");
 	exit(0);
 }
 
@@ -60,6 +58,5 @@ void	free_newline(char *str)
 {
 	if (*str)
 		free(str);
-	system("leaks so_long");
 	exit(0);
 }
